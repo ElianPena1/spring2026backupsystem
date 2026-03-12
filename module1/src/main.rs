@@ -1,3 +1,12 @@
+mod bank_account;
+
+use bank_account::BankAccount;
+
 fn main() {
-    println!("Hello, world!");
+    let mut account = BankAccount::new(100.0);
+
+    account.deposit(50.0);
+    account.withdraw(30.0);
+
+    println!("Current balance: {}", account.balance());
 }
